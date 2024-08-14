@@ -8,12 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		B25B34252C6D2BFA00430502 /* AppitizerSwiftUIAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25B34242C6D2BFA00430502 /* AppitizerSwiftUIAppApp.swift */; };
-		B25B34272C6D2BFA00430502 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25B34262C6D2BFA00430502 /* ContentView.swift */; };
+		B25B34272C6D2BFA00430502 /* AppitizerTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25B34262C6D2BFA00430502 /* AppitizerTabView.swift */; };
 		B25B34292C6D2BFC00430502 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B25B34282C6D2BFC00430502 /* Assets.xcassets */; };
 		B25B342C2C6D2BFC00430502 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B25B342B2C6D2BFC00430502 /* Preview Assets.xcassets */; };
 		B25B34362C6D2BFC00430502 /* AppitizerSwiftUIAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25B34352C6D2BFC00430502 /* AppitizerSwiftUIAppTests.swift */; };
 		B25B34402C6D2BFC00430502 /* AppitizerSwiftUIAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25B343F2C6D2BFC00430502 /* AppitizerSwiftUIAppUITests.swift */; };
 		B25B34422C6D2BFC00430502 /* AppitizerSwiftUIAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25B34412C6D2BFC00430502 /* AppitizerSwiftUIAppUITestsLaunchTests.swift */; };
+		B25B34502C6D2C3700430502 /* AppetizerListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25B344F2C6D2C3700430502 /* AppetizerListView.swift */; };
+		B25B34522C6D2C4800430502 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25B34512C6D2C4800430502 /* AccountView.swift */; };
+		B25B34542C6D2C5600430502 /* OrdeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25B34532C6D2C5600430502 /* OrdeView.swift */; };
+		B25B34572C6D487400430502 /* Appitizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25B34562C6D487400430502 /* Appitizer.swift */; };
+		B25B345A2C6D533C00430502 /* AppetizerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25B34592C6D533C00430502 /* AppetizerCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +41,7 @@
 /* Begin PBXFileReference section */
 		B25B34212C6D2BFA00430502 /* AppitizerSwiftUIApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppitizerSwiftUIApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B25B34242C6D2BFA00430502 /* AppitizerSwiftUIAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppitizerSwiftUIAppApp.swift; sourceTree = "<group>"; };
-		B25B34262C6D2BFA00430502 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B25B34262C6D2BFA00430502 /* AppitizerTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppitizerTabView.swift; sourceTree = "<group>"; };
 		B25B34282C6D2BFC00430502 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B25B342B2C6D2BFC00430502 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B25B34312C6D2BFC00430502 /* AppitizerSwiftUIAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppitizerSwiftUIAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +49,11 @@
 		B25B343B2C6D2BFC00430502 /* AppitizerSwiftUIAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppitizerSwiftUIAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B25B343F2C6D2BFC00430502 /* AppitizerSwiftUIAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppitizerSwiftUIAppUITests.swift; sourceTree = "<group>"; };
 		B25B34412C6D2BFC00430502 /* AppitizerSwiftUIAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppitizerSwiftUIAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B25B344F2C6D2C3700430502 /* AppetizerListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerListView.swift; sourceTree = "<group>"; };
+		B25B34512C6D2C4800430502 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		B25B34532C6D2C5600430502 /* OrdeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdeView.swift; sourceTree = "<group>"; };
+		B25B34562C6D487400430502 /* Appitizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appitizer.swift; sourceTree = "<group>"; };
+		B25B34592C6D533C00430502 /* AppetizerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +104,10 @@
 		B25B34232C6D2BFA00430502 /* AppitizerSwiftUIApp */ = {
 			isa = PBXGroup;
 			children = (
+				B25B34552C6D486200430502 /* Model */,
+				B25B344E2C6D2C2000430502 /* Views */,
 				B25B34242C6D2BFA00430502 /* AppitizerSwiftUIAppApp.swift */,
-				B25B34262C6D2BFA00430502 /* ContentView.swift */,
+				B25B34262C6D2BFA00430502 /* AppitizerTabView.swift */,
 				B25B34282C6D2BFC00430502 /* Assets.xcassets */,
 				B25B342A2C6D2BFC00430502 /* Preview Content */,
 			);
@@ -125,6 +137,33 @@
 				B25B34412C6D2BFC00430502 /* AppitizerSwiftUIAppUITestsLaunchTests.swift */,
 			);
 			path = AppitizerSwiftUIAppUITests;
+			sourceTree = "<group>";
+		};
+		B25B344E2C6D2C2000430502 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B25B34582C6D532700430502 /* Cells */,
+				B25B344F2C6D2C3700430502 /* AppetizerListView.swift */,
+				B25B34512C6D2C4800430502 /* AccountView.swift */,
+				B25B34532C6D2C5600430502 /* OrdeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B25B34552C6D486200430502 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B25B34562C6D487400430502 /* Appitizer.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B25B34582C6D532700430502 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B25B34592C6D533C00430502 /* AppetizerCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +296,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B25B34272C6D2BFA00430502 /* ContentView.swift in Sources */,
+				B25B34522C6D2C4800430502 /* AccountView.swift in Sources */,
+				B25B34272C6D2BFA00430502 /* AppitizerTabView.swift in Sources */,
 				B25B34252C6D2BFA00430502 /* AppitizerSwiftUIAppApp.swift in Sources */,
+				B25B34542C6D2C5600430502 /* OrdeView.swift in Sources */,
+				B25B345A2C6D533C00430502 /* AppetizerCell.swift in Sources */,
+				B25B34572C6D487400430502 /* Appitizer.swift in Sources */,
+				B25B34502C6D2C3700430502 /* AppetizerListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
