@@ -21,7 +21,7 @@ struct Appetizer: Codable, Identifiable {
     let carbs, calories, protein : Int
 }
 
-struct appitizerMockData {
+struct AppitizerMockData {
     static let sampleAppetizer1 = Appetizer(id: 1,
                                            price: 8.99,
                                            imageURL: "https://seanallen-course-backend.herokuapp.com/images/appetizers/asian-flank-steak.jpg",

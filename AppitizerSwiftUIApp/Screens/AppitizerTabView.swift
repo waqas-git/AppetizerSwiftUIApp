@@ -23,7 +23,7 @@ struct AppitizerTabView: View {
                     Label("Order", systemImage: "bag")
                 }
         }
-        .accentColor(Color("Primary"))
+        .accentColor(Color(.Primary!))
     }
 }
 
