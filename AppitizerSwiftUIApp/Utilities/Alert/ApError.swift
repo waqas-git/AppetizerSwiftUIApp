@@ -12,3 +12,10 @@ enum ApError : String, Error{
     case invalidResponse    = "Server doesn't respond to the application. Please try again."
     case invalidData        = "The Data received from the server is invalid. Please try again."
 }
+
+enum ApValidation: String{
+    case invalidForm        = "Please ensure all the fields in the form are filled."
+    case invalidEmail       = "Please enter a valid email address."
+    case profileSave        = "Your profile saved successfully."
+    case profileError       = "Unable to save or retrive your profile. Please try again."
+}
