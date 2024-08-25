@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct AppitizerSwiftUIAppApp: App {
+    var order = Order()
     var body: some Scene {
         WindowGroup {
-            AppitizerTabView()
+            AppitizerTabView().environmentObject(order)
         }
     }
 }

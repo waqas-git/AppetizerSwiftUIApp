@@ -10,7 +10,7 @@ import SwiftUI
 struct AppetizerDetailView: View {
     var appetizer : Appetizer
     @Binding var isShowDetail: Bool
-
+    @EnvironmentObject var order: Order
     var body: some View {
         VStack{
             AppetizerRemoteImage(urlString: appetizer.imageURL)
@@ -37,10 +37,17 @@ struct AppetizerDetailView: View {
             Spacer()
             
             Button{
-                print("Tapped")
+                order.add(appetizer)
+                isShowDetail = false
             }label: {
-                ApButton(title: "$\(appetizer.price, specifier: "%.2f") Add to order")
-            }.padding(.bottom, 30)
+                //ApButton(title: "$\(appetizer.price, specifier: "%.2f") Add to order")
+                Text("$\(appetizer.price, specifier: "%.2f") Add to order")
+            }
+            .modifier(CustomButtonModifier())
+//            .buttonStyle(.bordered)
+//            .tint(.Primary)
+//            .controlSize(.large)
+            .padding(.bottom, 30)
             
         }.frame(width: 300, height: 525)
             .background(Color(.systemBackground))

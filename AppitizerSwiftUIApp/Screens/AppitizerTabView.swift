@@ -8,27 +8,24 @@
 import SwiftUI
 
 struct AppitizerTabView: View {
+    @EnvironmentObject var order: Order
     var body: some View {
         TabView{
             AppetizerListView()
-                .tabItem {
-                    Label("Home", systemImage: "house")
-                }
+                .tabItem { Label("Home", systemImage: "house") }
+            
             AccountView()
-                .tabItem {
-                    Label("Account", systemImage: "person")
-                }
+                .tabItem { Label("Account", systemImage: "person") }
+            
             OrdeView()
-                .tabItem {
-                    Label("Order", systemImage: "bag")
-                }
+                .tabItem { Label("Order", systemImage: "bag") }
+                        .badge(order.items.count)
         }
-        .accentColor(Color(.Primary!))
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        AppitizerTabView()
+        AppitizerTabView().environmentObject(Order())
     }
 }

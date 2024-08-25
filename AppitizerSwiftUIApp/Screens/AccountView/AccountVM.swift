@@ -24,7 +24,7 @@ final class AccountVM: ObservableObject{
     }
     
     func retrieveProfile(){
-        guard let userData = userData else {return}
+        guard let userData else {return}
         
         do{
             user = try JSONDecoder().decode(User.self, from: userData)

@@ -12,7 +12,7 @@ final class ImageLoader : ObservableObject {
     
     func load(from urlString : String){
         NetworkManager.shared.downloadImage(from: urlString) { uiImage in
-            guard let uiImage = uiImage else {return}
+            guard let uiImage else {return}
             
             DispatchQueue.main.async {
                // Image(uiImage: uiImage) is a SwiftUI initializer that converts a UIImage (from UIKit) into a SwiftUI.Image.

@@ -8,18 +8,34 @@
 import SwiftUI
 
 struct AccountView: View {
+    
+    enum FormTextFields {
+        case firstname
+        case lastname
+        case email
+    }
     @StateObject var viewModel = AccountVM()
+    @FocusState private var focusedTextField: FormTextFields?
     
     var body: some View {
         NavigationStack{
             Form{
                 Section(header: Text("PERSONAL INFO")) {
                     TextField("First Name", text: $viewModel.user.firstName)
+                        .focused($focusedTextField, equals: .firstname)
+                        .onSubmit {focusedTextField = .lastname}
+                    
                     TextField("Last Name", text: $viewModel.user.lastName)
+                        .focused($focusedTextField, equals: .lastname)
+                        .onSubmit {focusedTextField = .email}
+                    
                     TextField("Email", text: $viewModel.user.email)
+                        .focused($focusedTextField, equals: .email)
                         .keyboardType(.emailAddress)
                         .autocapitalization(.none)
                         .autocorrectionDisabled(true)
+                        .onSubmit {focusedTextField = nil}
+                    
                     DatePicker("Date Picker", selection: $viewModel.user.birthday,
                                displayedComponents: .date)
                     Button{
@@ -34,6 +50,12 @@ struct AccountView: View {
                 }.toggleStyle(SwitchToggleStyle(tint: .Primary))
             }
             .navigationTitle("Account")
+            .toolbar{ToolbarItemGroup(placement: .keyboard){
+                Button("Dismiss") {
+                    focusedTextField = nil
+                }
+            }
+            }
         }.onAppear(){
             viewModel.retrieveProfile()
         }

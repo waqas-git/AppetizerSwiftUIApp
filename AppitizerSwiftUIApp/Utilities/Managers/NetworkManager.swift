@@ -15,40 +15,18 @@ class NetworkManager{
     
     public init(){}
     
-    func  getAppetizers(completed: @escaping (Result<[Appetizer], ApError>) -> Void) {
-        
+    func  getAppetizers() async throws -> [Appetizer] {
         guard let url = URL(string: NetworkManager.BASE_URL + appitizerUrl) else {
-            completed(.failure(.invalidURL))
-            return
+            throw ApError.invalidURL
         }
-        
-        let task = URLSession.shared.dataTask(with: url){ data, response, error in
-            
-            if let _  = error{
-                completed(.failure(.unableToComplete))
-                return
-            }
-            
-            guard let response = response as? HTTPURLResponse , response.statusCode == 200 else {
-                completed(.failure(.invalidResponse))
-                return
-            }
-            
-            guard let data = data else {
-                completed(.failure(.invalidData))
-                return
-            }
+        let (data, _) = try await URLSession.shared.data(from: url)
             do{
                 let decoder = JSONDecoder()
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
-                let decodeResponse = try decoder.decode(AppetizerRespnse.self, from: data)
-                completed(.success(decodeResponse.request))
-                return
+                return try decoder.decode(AppetizerRespnse.self, from: data).request
             }catch{
-                completed(.failure(.invalidResponse))
+               throw ApError.invalidResponse
             }
-        }
-        task.resume()
     }
     
     func downloadImage(from urlString: String, completed: @escaping (UIImage?) -> Void){
@@ -65,7 +43,7 @@ class NetworkManager{
             }
             
             let task = URLSession.shared.dataTask(with: url) {data, response, error in
-                guard let data = data, let image = UIImage(data: data) else {
+                guard let data, let image = UIImage(data: data) else {
                     completed(nil)
                     return
                 }
